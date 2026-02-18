@@ -87,8 +87,10 @@ jobs:
         run: |
           dotnet tool install --global minver-cli
           VERSION=$(minver --tag-prefix v)
+          BASE_VERSION=$(echo "$VERSION" | cut -d'-' -f1)
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "📦 Version: $VERSION"
+          echo "base_version=$BASE_VERSION" >> "$GITHUB_OUTPUT"
+          echo "📦 Version: $VERSION (base: $BASE_VERSION)"
 
       # ----------------------------------------------------------------------
       # SonarCloud — Begin Analysis
@@ -109,7 +111,7 @@ jobs:
             /d:sonar.coverage.exclusions="**/*Tests*/**,**/Program.cs" \
             /d:sonar.exclusions="**/obj/**,**/bin/**,**/Migrations/**,.github/**" \
             /d:sonar.cpd.exclusions="src/Demarbit.StrongIds.Generator/Templates/**" \
-            /v:"${{ steps.version.outputs.version }}"
+            /v:"${{ steps.version.outputs.base_version }}"
 
       # ----------------------------------------------------------------------
       # Build

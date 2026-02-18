@@ -12,7 +12,7 @@
 
   <!-- Pack the generator as an analyzer -->
   <ItemGroup>
-    <None Include="$(OutputPath)\..\Demarbit.StrongIds.Generator\$(TargetFramework)\Demarbit.StrongIds.Generator.dll"
+    <None Include="..\Demarbit.StrongIds.Generator\bin\$(Configuration)\netstandard2.0\Demarbit.StrongIds.Generator.dll"
           Pack="true"
           PackagePath="analyzers/dotnet/cs"
           Visible="false" />
@@ -22,6 +22,9 @@
   <ItemGroup>
     <None Include="../../README.md" Pack="true" PackagePath="\" />
     <None Include="../../icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demarbit.StrongIds.Generator\Demarbit.StrongIds.Generator.csproj" />
   </ItemGroup>
 
 </Project>

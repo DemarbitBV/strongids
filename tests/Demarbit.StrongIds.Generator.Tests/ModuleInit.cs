@@ -1,0 +1,12 @@
+using System.Runtime.CompilerServices;
+
+namespace Demarbit.StrongIds.Generator.Tests;
+
+public static class ModuleInit
+{
+    [ModuleInitializer]
+    public static void Init()
+    {
+        VerifySourceGenerators.Initialize();
+    }
+}

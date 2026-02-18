@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+    <PackageId>Demarbit.StrongIds</PackageId>
+    <!-- other NuGet metadata -->
+  </PropertyGroup>
+
+  <!-- Pack the generator as an analyzer -->
+  <ItemGroup>
+    <None Include="$(OutputPath)\..\Demarbit.StrongIds.Generator\$(TargetFramework)\Demarbit.StrongIds.Generator.dll"
+          Pack="true"
+          PackagePath="analyzers/dotnet/cs"
+          Visible="false" />
+  </ItemGroup>
+
+</Project>

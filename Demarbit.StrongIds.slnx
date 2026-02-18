@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Demarbit.StrongIds.Generator/Demarbit.StrongIds.Generator.csproj" />
+    <Project Path="src/Demarbit.StrongIds/Demarbit.StrongIds.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Demarbit.StrongIds.Generator.Tests/Demarbit.StrongIds.Generator.Tests.csproj" />
+    <Project Path="tests/Demarbit.StrongIds.Tests/Demarbit.StrongIds.Tests.csproj" />
+  </Folder>
+</Solution>

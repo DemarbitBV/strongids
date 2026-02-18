@@ -7,9 +7,16 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Demarbit.StrongIds.Generator;
 
+/// <summary>
+/// Source code generator for the StrongId struct
+/// </summary>
 [Generator]
 public class StrongIdGenerator : IIncrementalGenerator
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="context"></param>
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
         var structs = context.SyntaxProvider

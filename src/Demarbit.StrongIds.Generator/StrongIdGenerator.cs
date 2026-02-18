@@ -64,7 +64,7 @@ public class StrongIdGenerator : IIncrementalGenerator
             BackingType.Int => IntTemplate.Generate(model),
             BackingType.Long => LongTemplate.Generate(model),
             BackingType.String => StringTemplate.Generate(model),
-            _ => throw new ArgumentOutOfRangeException()
+            _ => throw new ArgumentOutOfRangeException(nameof(model.BackingType))
         };
     }
 }

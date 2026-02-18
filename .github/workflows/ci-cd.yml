@@ -108,6 +108,7 @@ jobs:
             /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" \
             /d:sonar.coverage.exclusions="**/*Tests*/**,**/Program.cs" \
             /d:sonar.exclusions="**/obj/**,**/bin/**,**/Migrations/**,.github/**" \
+            /d:sonar.cpd.exclusions="src/Demarbit.StrongIds.Generator/Templates/**" \
             /v:"${{ steps.version.outputs.version }}"
 
       # ----------------------------------------------------------------------

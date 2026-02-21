@@ -24,7 +24,8 @@
     <None Include="../../icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demarbit.StrongIds.Generator\Demarbit.StrongIds.Generator.csproj" />
+    <ProjectReference Include="..\Demarbit.StrongIds.Generator\Demarbit.StrongIds.Generator.csproj"
+                      PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
